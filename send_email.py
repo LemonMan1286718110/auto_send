@@ -11,7 +11,7 @@ def send_email():
     msg["To"] = "recv@example.com"
 
     # login and send email
-    server = smtplib.SMTP_SSL("smtp.qq.com", 465)
+    server = smtplib.SMTP_SSL("smtp.example.com", 465)
     server.login("send@example.com", "your_authorization_code")
     server.sendmail("send@example.com", ["recv@example.com"], msg.as_string())
     server.quit()
